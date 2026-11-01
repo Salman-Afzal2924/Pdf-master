@@ -381,3 +381,283 @@ footer p {
         justify-content: center;
     }
 }
+
+/* =====================================
+   PDFMASTER - PREMIUM DESIGN UPGRADE
+===================================== */
+
+:root {
+    --primary: #6546e8;
+    --primary-dark: #5032ce;
+    --text-main: #191b35;
+    --text-muted: #737990;
+    --surface: #ffffff;
+    --page-bg: #f8f9ff;
+    --border: #e9eaf3;
+}
+
+/* Smooth overall appearance */
+
+body {
+    background: var(--page-bg);
+    color: var(--text-main);
+    overflow-x: hidden;
+}
+
+/* Premium navigation */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255,255,255,0.94);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(230,230,245,0.8);
+    transition: box-shadow 0.3s ease;
+}
+
+.logo {
+    letter-spacing: -0.8px;
+}
+
+.logo-icon {
+    box-shadow: 0 5px 15px rgba(101,70,232,0.25);
+}
+
+nav a {
+    transition: color 0.2s ease;
+}
+
+/* Premium buttons */
+
+.nav-button,
+.primary-button {
+    background: linear-gradient(135deg, #7658f1, #5435d2);
+    box-shadow: 0 6px 18px rgba(101,70,232,0.2);
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+.nav-button:hover,
+.primary-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(101,70,232,0.3);
+}
+
+/* Hero section */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 85% 15%,
+        rgba(126,98,255,0.16), transparent 35%),
+        linear-gradient(120deg, #f1edff, #f8faff);
+}
+
+.hero h1 {
+    letter-spacing: -2px;
+    color: #191b35;
+}
+
+.hero h1 span {
+    background: linear-gradient(90deg, #7658f1, #a15cf4);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.tag {
+    display: inline-block;
+    padding: 9px 14px;
+    background: #e9e3ff;
+    border-radius: 30px;
+}
+
+.document-card {
+    border: 1px solid rgba(255,255,255,0.9);
+    box-shadow: 0 25px 70px rgba(75,60,150,0.16);
+    transition: transform 0.35s ease;
+}
+
+.document-card:hover {
+    transform: rotate(0deg) translateY(-5px);
+}
+
+/* Section headings */
+
+.section-heading h2,
+.about-section h2 {
+    letter-spacing: -1px;
+    color: #191b35;
+}
+
+.section-heading > p {
+    line-height: 1.8;
+}
+
+/* Search field */
+
+.search-box input {
+    background: white;
+    border: 1px solid #e5e4f0;
+    box-shadow: 0 5px 20px rgba(40,35,90,0.04);
+    transition: all 0.25s ease;
+}
+
+.search-box input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(101,70,232,0.10);
+}
+
+/* Premium tool cards */
+
+.tool-card {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(35,35,80,0.025);
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease,
+                border-color 0.3s ease;
+}
+
+.tool-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #7658f1, #ad65f5);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.tool-card:hover {
+    transform: translateY(-8px);
+    border-color: #d9d0ff;
+    box-shadow: 0 18px 40px rgba(70,55,140,0.10);
+}
+
+.tool-card:hover::before {
+    transform: scaleX(1);
+}
+
+.tool-icon {
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.tool-card:hover .tool-icon {
+    transform: scale(1.08);
+}
+
+.tool-card h3 {
+    color: #252642;
+    letter-spacing: -0.3px;
+}
+
+.tool-card p {
+    color: #777c91;
+}
+
+.tool-card a {
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.tool-card a:hover {
+    transform: translateX(4px);
+}
+
+/* About section */
+
+.about-section {
+    background:
+        radial-gradient(circle at 10% 10%,
+        rgba(135,110,255,0.10), transparent 35%),
+        #f0edff;
+}
+
+.benefits div {
+    border: 1px solid rgba(230,225,255,0.8);
+    box-shadow: 0 8px 25px rgba(50,40,100,0.04);
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+.benefits div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(50,40,100,0.08);
+}
+
+/* Footer */
+
+footer {
+    border-top: 1px solid #ececf4;
+}
+
+.footer-links a {
+    transition: color 0.2s ease;
+}
+
+/* Keyboard accessibility */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+    outline: 3px solid rgba(101,70,232,0.4);
+    outline-offset: 3px;
+}
+
+/* Responsive improvements */
+
+@media (max-width: 950px) {
+    .hero {
+        gap: 35px;
+    }
+
+    .tools-grid {
+        gap: 18px;
+    }
+}
+
+@media (max-width: 650px) {
+    .navbar {
+        position: relative;
+    }
+
+    .hero h1 {
+        letter-spacing: -1px;
+    }
+
+    .document-card {
+        max-width: 280px;
+        width: 100%;
+    }
+
+    .section-heading h2,
+    .about-section h2 {
+        font-size: 29px;
+    }
+
+    .tool-card {
+        padding: 25px;
+    }
+}
+
+/* Respect reduced-motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
+
