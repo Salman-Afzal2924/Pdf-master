@@ -1,0 +1,219 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PDFMaster - Free Online PDF Tools</title>
+
+    <meta name="description"
+          content="Free online PDF tools to merge, split, compress and convert PDF files easily.">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="logo">
+        <span class="logo-icon">P</span>
+        PDF<span>Master</span>
+    </div>
+
+    <nav>
+        <a href="#tools">All Tools</a>
+        <a href="#about">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <button class="nav-button" onclick="scrollToTools()">
+        Explore Tools
+    </button>
+</header>
+
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <span class="tag">FREE ONLINE PDF TOOLS</span>
+
+        <h1>
+            All Your PDF Tools.
+            <span>One Simple Place.</span>
+        </h1>
+
+        <p>
+            Merge, split, compress and convert PDF files.
+            Everything you need, quickly and easily.
+        </p>
+
+        <button class="primary-button" onclick="scrollToTools()">
+            Explore All Tools →
+        </button>
+
+        <div class="hero-features">
+            <span>✓ Free to use</span>
+            <span>✓ Easy to use</span>
+            <span>✓ No registration</span>
+        </div>
+
+    </div>
+
+    <div class="hero-visual">
+        <div class="document-card">
+            <div class="pdf-icon">PDF</div>
+            <h3>Your Documents</h3>
+            <p>Manage your PDF files easily.</p>
+
+            <div class="document-line"></div>
+            <div class="document-line short"></div>
+            <div class="document-line"></div>
+            <div class="document-line short"></div>
+        </div>
+    </div>
+
+</section>
+
+
+<section class="tools-section" id="tools">
+
+    <div class="section-heading">
+        <span class="tag">OUR COLLECTION</span>
+
+        <h2>Explore PDF Tools</h2>
+
+        <p>Everything you need to work with PDF files.</p>
+    </div>
+
+    <div class="search-box">
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search PDF tools..."
+        >
+        <span>⌕</span>
+    </div>
+
+    <div class="tools-grid" id="toolsGrid">
+
+        <div class="tool-card" data-name="merge pdf">
+            <div class="tool-icon purple">▣</div>
+            <h3>Merge PDF</h3>
+            <p>Combine multiple PDF files into one document.</p>
+            <a href="merge.html">Use Tool →</a>
+        </div>
+
+        <div class="tool-card" data-name="split pdf">
+            <div class="tool-icon blue">✂</div>
+            <h3>Split PDF</h3>
+            <p>Extract selected pages from your PDF.</p>
+            <a href="split.html">Use Tool →</a>
+        </div>
+
+        <div class="tool-card" data-name="compress pdf">
+            <div class="tool-icon green">⇩</div>
+            <h3>Compress PDF</h3>
+            <p>Reduce PDF file size for easier sharing.</p>
+            <a href="compress.html">Use Tool →</a>
+        </div>
+
+        <div class="tool-card" data-name="pdf to jpg">
+            <div class="tool-icon orange">▧</div>
+            <h3>PDF to JPG</h3>
+            <p>Convert PDF pages into image files.</p>
+            <a href="pdf-to-jpg.html">Use Tool →</a>
+        </div>
+
+        <div class="tool-card" data-name="jpg to pdf">
+            <div class="tool-icon pink">▤</div>
+            <h3>JPG to PDF</h3>
+            <p>Convert your images into PDF documents.</p>
+            <a href="jpg-to-pdf.html">Use Tool →</a>
+        </div>
+
+        <div class="tool-card" data-name="rotate pdf">
+            <div class="tool-icon yellow">↻</div>
+            <h3>Rotate PDF</h3>
+            <p>Rotate PDF pages in your preferred direction.</p>
+            <a href="rotate.html">Use Tool →</a>
+        </div>
+
+        <div class="tool-card" data-name="remove pdf pages">
+            <div class="tool-icon red">−</div>
+            <h3>Remove Pages</h3>
+            <p>Delete unwanted pages from PDF documents.</p>
+            <a href="remove-pages.html">Use Tool →</a>
+        </div>
+
+        <div class="tool-card" data-name="add page numbers">
+            <div class="tool-icon teal">#</div>
+            <h3>Add Page Numbers</h3>
+            <p>Add page numbers to your PDF files.</p>
+            <a href="page-numbers.html">Use Tool →</a>
+        </div>
+
+    </div>
+
+    <p id="noResults" class="no-results" hidden>
+        No matching tools found.
+    </p>
+
+</section>
+
+
+<section class="about-section" id="about">
+
+    <h2>Why Choose PDFMaster?</h2>
+
+    <p>
+        PDFMaster provides simple and convenient tools
+        to manage your documents online.
+    </p>
+
+    <div class="benefits">
+        <div>
+            <h3>⚡ Fast</h3>
+            <p>Simple document processing.</p>
+        </div>
+
+        <div>
+            <h3>🔒 Privacy</h3>
+            <p>We aim to process files securely.</p>
+        </div>
+
+        <div>
+            <h3>🌐 Accessible</h3>
+            <p>Use tools from your browser.</p>
+        </div>
+    </div>
+
+</section>
+
+
+<footer>
+    <div class="logo">
+        <span class="logo-icon">P</span>
+        PDF<span>Master</span>
+    </div>
+
+    <p>© 2026 PDFMaster. All rights reserved.</p>
+
+    <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
