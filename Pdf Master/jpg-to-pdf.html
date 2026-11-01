@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JPG to PDF - PDFMaster</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .tool-container {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+        }
+
+        .upload-area {
+            border: 2px dashed #8b5cf6;
+            border-radius: 12px;
+            padding: 45px 20px;
+            text-align: center;
+            cursor: pointer;
+            background: #faf8ff;
+            margin: 25px 0;
+        }
+
+        .upload-area:hover {
+            background: #f1ebff;
+        }
+
+        .upload-area h3 {
+            color: #6d28d9;
+        }
+
+        .file-list {
+            margin: 20px 0;
+        }
+
+        .file-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            padding: 12px;
+            background: #f3f4f6;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .file-item span {
+            overflow-wrap: anywhere;
+        }
+
+        .remove-image {
+            border: none;
+            background: #dc2626;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .action-buttons button {
+            padding: 13px 22px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        #convertBtn {
+            background: #6d28d9;
+            color: white;
+        }
+
+        #convertBtn:disabled {
+            background: #aaa;
+            cursor: not-allowed;
+        }
+
+        #clearBtn {
+            background: #dc2626;
+            color: white;
+        }
+
+        #message {
+            margin-top: 20px;
+            font-weight: bold;
+            overflow-wrap: anywhere;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: #6d28d9;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="tool-container">
+
+        <h1>JPG to PDF</h1>
+
+        <p>
+            Convert multiple JPG or PNG images into one PDF document.
+        </p>
+
+        <div class="upload-area" id="uploadArea">
+            <h3>Select Your Images</h3>
+            <p>Click here or drag and drop JPG, JPEG or PNG images</p>
+
+            <input
+                type="file"
+                id="fileInput"
+                accept="image/jpeg,image/png,.jpg,.jpeg,.png"
+                multiple
+                hidden
+            >
+        </div>
+
+        <div id="fileList" class="file-list"></div>
+
+        <div class="action-buttons">
+
+            <button id="convertBtn" disabled>
+                Convert to PDF
+            </button>
+
+            <button id="clearBtn">
+                Clear All
+            </button>
+
+        </div>
+
+        <div id="message"></div>
+
+        <a href="index.html" class="back-link">
+            ← Back to PDFMaster
+        </a>
+
+    </main>
+
+    <script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+    <script src="jpg-to-pdf.js"></script>
+
+</body>
+</html>

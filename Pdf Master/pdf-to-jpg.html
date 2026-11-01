@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF to JPG - PDFMaster</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .tool-container {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+        }
+
+        .upload-area {
+            border: 2px dashed #8b5cf6;
+            border-radius: 12px;
+            padding: 45px 20px;
+            text-align: center;
+            cursor: pointer;
+            background: #faf8ff;
+            margin: 25px 0;
+        }
+
+        .upload-area:hover {
+            background: #f1ebff;
+        }
+
+        .upload-area h3 {
+            color: #6d28d9;
+        }
+
+        .file-info {
+            display: none;
+            margin: 20px 0;
+            padding: 15px;
+            background: #f3f4f6;
+            border-radius: 8px;
+        }
+
+        .settings {
+            margin: 25px 0;
+        }
+
+        .settings label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .settings select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .action-buttons button {
+            padding: 13px 22px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        #convertBtn {
+            background: #6d28d9;
+            color: white;
+        }
+
+        #convertBtn:disabled {
+            background: #aaa;
+            cursor: not-allowed;
+        }
+
+        #removeFileBtn {
+            background: #dc2626;
+            color: white;
+            display: none;
+        }
+
+        #message {
+            margin-top: 20px;
+            font-weight: bold;
+            overflow-wrap: anywhere;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: #6d28d9;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="tool-container">
+
+        <h1>PDF to JPG</h1>
+
+        <p>
+            Convert every page of your PDF into a high-quality JPG image.
+        </p>
+
+        <div class="upload-area" id="uploadArea">
+            <h3>Upload Your PDF</h3>
+            <p>Click here or drag and drop your PDF file</p>
+
+            <input
+                type="file"
+                id="fileInput"
+                accept=".pdf,application/pdf"
+                hidden
+            >
+        </div>
+
+        <div class="file-info" id="fileInfo"></div>
+
+        <div class="settings">
+            <label for="quality">Image Quality</label>
+
+            <select id="quality">
+                <option value="0.7">Standard</option>
+                <option value="0.85" selected>High Quality</option>
+                <option value="0.95">Best Quality</option>
+            </select>
+        </div>
+
+        <div class="action-buttons">
+
+            <button id="convertBtn" disabled>
+                Convert to JPG
+            </button>
+
+            <button id="removeFileBtn">
+                Remove PDF
+            </button>
+
+        </div>
+
+        <div id="message"></div>
+
+        <a href="index.html" class="back-link">
+            ← Back to PDFMaster
+        </a>
+
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="pdf-to-jpg.js"></script>
+
+</body>
+</html>

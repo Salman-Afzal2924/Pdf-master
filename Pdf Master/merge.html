@@ -1,0 +1,244 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Merge PDF Online Free | PDFMaster</title>
+
+    <meta name="description"
+          content="Merge multiple PDF files into one document online for free using PDFMaster.">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <style>
+        .merge-container {
+            max-width: 850px;
+            margin: 70px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .merge-container h1 {
+            font-size: 38px;
+            margin: 15px 0;
+        }
+
+        .merge-container > p {
+            color: #777c90;
+            line-height: 1.7;
+        }
+
+        .upload-area {
+            background: white;
+            border: 2px dashed #b9aaf7;
+            border-radius: 18px;
+            padding: 55px 20px;
+            margin: 35px 0 20px;
+            cursor: pointer;
+            transition: 0.25s;
+        }
+
+        .upload-area:hover,
+        .upload-area.dragover {
+            background: #f4f1ff;
+            border-color: #7155e9;
+        }
+
+        .upload-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .upload-area h3 {
+            margin-bottom: 10px;
+        }
+
+        .upload-area p {
+            color: #85899b;
+            font-size: 13px;
+        }
+
+        .file-input {
+            display: none;
+        }
+
+        .file-list {
+            text-align: left;
+            margin: 25px 0;
+        }
+
+        .file-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            background: white;
+            padding: 15px;
+            border: 1px solid #eeeef5;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .file-info {
+            min-width: 0;
+        }
+
+        .file-info strong {
+            display: block;
+            overflow-wrap: anywhere;
+            font-size: 14px;
+        }
+
+        .file-info small {
+            color: #85899b;
+        }
+
+        .remove-btn {
+            border: none;
+            background: #ffeaea;
+            color: #e45151;
+            padding: 8px 12px;
+            border-radius: 7px;
+            cursor: pointer;
+        }
+
+        .merge-btn {
+            background: #7155e9;
+            color: white;
+            border: none;
+            padding: 16px 35px;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .merge-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .merge-btn:hover:not(:disabled) {
+            background: #573bd0;
+        }
+
+        .status-message {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #555b70;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            color: #7155e9;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        @media(max-width: 600px) {
+            .merge-container h1 {
+                font-size: 29px;
+            }
+
+            .upload-area {
+                padding: 40px 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <a href="index.html" class="logo"
+       style="text-decoration:none;color:#20233a;">
+        <span class="logo-icon">P</span>
+        PDF<span>Master</span>
+    </a>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#tools">All Tools</a>
+    </nav>
+
+    <button class="nav-button"
+            onclick="window.location.href='index.html#tools'">
+        All Tools
+    </button>
+
+</header>
+
+
+<main class="merge-container">
+
+    <span class="tag">FREE PDF TOOL</span>
+
+    <h1>Merge PDF Files</h1>
+
+    <p>
+        Combine multiple PDF documents into one single file.
+        Upload your files and download your merged PDF.
+    </p>
+
+
+    <div class="upload-area" id="uploadArea">
+
+        <div class="upload-icon">📄</div>
+
+        <h3>Drop your PDF files here</h3>
+
+        <p>Or click below to browse your computer</p>
+
+        <br>
+
+        <button type="button" class="primary-button"
+                id="browseButton">
+            Select PDF Files
+        </button>
+
+        <input
+            type="file"
+            id="pdfInput"
+            class="file-input"
+            accept=".pdf,application/pdf"
+            multiple
+        >
+
+    </div>
+
+
+    <div class="file-list" id="fileList"></div>
+
+
+    <button class="merge-btn" id="mergeButton" disabled>
+        Merge PDF Files
+    </button>
+
+
+    <div class="status-message" id="statusMessage"
+         role="status" aria-live="polite"></div>
+
+
+    <a href="index.html" class="back-link">
+        ← Back to PDFMaster
+    </a>
+
+</main>
+
+
+<script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+
+<script src="merge.js"></script>
+
+</body>
+</html>

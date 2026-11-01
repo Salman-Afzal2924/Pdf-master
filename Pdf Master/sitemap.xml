@@ -1,0 +1,66 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <url>
+        <loc>https://YOUR-DOMAIN.com/</loc>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://YOUR-DOMAIN.com/merge.html</loc>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://YOUR-DOMAIN.com/split.html</loc>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://YOUR-DOMAIN.com/compress.html</loc>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://YOUR-DOMAIN.com/pdf-to-jpg.html</loc>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://YOUR-DOMAIN.com/jpg-to-pdf.html</loc>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://YOUR-DOMAIN.com/rotate.html</loc>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://YOUR-DOMAIN.com/remove-pages.html</loc>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://YOUR-DOMAIN.com/page-numbers.html</loc>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://YOUR-DOMAIN.com/about.html</loc>
+        <priority>0.5</priority>
+    </url>
+
+    <url>
+        <loc>https://YOUR-DOMAIN.com/contact.html</loc>
+        <priority>0.5</priority>
+    </url>
+
+    <url>
+        <loc>https://YOUR-DOMAIN.com/privacy.html</loc>
+        <priority>0.5</priority>
+    </url>
+
+</urlset>
